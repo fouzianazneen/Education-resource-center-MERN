@@ -73,4 +73,4 @@ This project involves building a full-stack web application using the MERN stack
 
 ## Contributing
 Contributions are welcome. For major changes, please open an issue first to discuss what you would like to change.
-uctions. Tailwind CSS is emphasized as a key technology for styling, enhancing the clarity and appeal of your project description for potential contributors or users.
+
