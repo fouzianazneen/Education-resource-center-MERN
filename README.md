@@ -1,7 +1,8 @@
 
+
 # Education Web App - Full Stack Development Project
 
-This project is part of Milestone 13 in the Full Stack Development course at Codrel. It involves building a full-stack web application using the MERN stack (MongoDB, Express.js, React.js, Node.js) to create an Education Web App.
+This project involves building a full-stack web application using the MERN stack (MongoDB, Express.js, React.js, Node.js) with Tailwind CSS for styling to create an Education Web App.
 
 ## Features Implemented
 
@@ -45,11 +46,9 @@ This project is part of Milestone 13 in the Full Stack Development course at Cod
 - Implemented React Hooks and props for efficient component management.
 - Managed file uploads and integrated them with the backend.
 
-## Additional Guidance
-- Emphasized modular and maintainable code using React components and state management.
-- Implemented responsive design principles for a seamless user experience across devices.
-- Focused on user interface design, ensuring a polished and user-friendly interface.
-- Leveraged appropriate technologies and libraries to enhance project functionality.
+## Styling with Tailwind CSS
+- Leveraged Tailwind CSS for responsive and utility-first styling throughout the application.
+- Customized components and layouts using Tailwind utility classes.
 
 ## Installation and Setup
 1. Clone the repository:
@@ -74,4 +73,4 @@ This project is part of Milestone 13 in the Full Stack Development course at Cod
 
 ## Contributing
 Contributions are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
+uctions. Tailwind CSS is emphasized as a key technology for styling, enhancing the clarity and appeal of your project description for potential contributors or users.
