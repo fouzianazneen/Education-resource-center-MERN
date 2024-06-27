@@ -67,7 +67,7 @@ This project involves building a full-stack web application using the MERN stack
    ```
    npm start
    ```
-5. Open your browser and visit `http://localhost:3000` to view the application.
+
 
 
 
