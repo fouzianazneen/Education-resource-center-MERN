@@ -19,17 +19,47 @@ router.post('/register/student', async (req, res) => {
 
 
 
+// router.post('/register/educator', async (req, res) => {
+//   try {
+//     const { password, ...rest } = req.body;
+//     const hashedPassword = await bcrypt.hash(password, 10);
+//     const educator = new Educator({ ...rest, password: hashedPassword });
+//     await educator.save();
+//     res.status(201).send('Educator registered');
+//   } catch (error) {
+//     res.status(400).send(error.message);
+//   }
+// });
+
+
+
+
+
+
+
+const validateEducatorData = (data) => {
+  const requiredFields = ['username', 'email', 'password', 'collegeName', 'experience'];
+  for (const field of requiredFields) {
+    if (!data[field]) {
+      throw new Error(`Missing required field: ${field}`);
+    }
+  }
+};
+
 router.post('/register/educator', async (req, res) => {
   try {
+    validateEducatorData(req.body);
     const { password, ...rest } = req.body;
     const hashedPassword = await bcrypt.hash(password, 10);
     const educator = new Educator({ ...rest, password: hashedPassword });
     await educator.save();
     res.status(201).send('Educator registered');
   } catch (error) {
-    res.status(400).send(error.message);
+    console.error('Error registering educator:', error.message);
+    res.status(400).send('Error registering educator: ' + error.message);
   }
 });
+
 
 
 router.post('/login', async (req, res) => {

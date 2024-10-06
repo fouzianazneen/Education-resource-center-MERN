@@ -19,7 +19,7 @@ const MONGO_URI = 'mongodb://localhost:27017/education-resource';
 
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: 'http://localhost:5174',
   credentials: true,
 }));
 
