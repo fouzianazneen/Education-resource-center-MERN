@@ -1,12 +1,7 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
-<<<<<<< HEAD
 // const Educator = require('../models/educator');
 const Student = require('../models/student');
-=======
-// const Educator = require('../models/Educator');
-// const Student = require('../models/Student');
->>>>>>> badf7bda353ce8d585ee774e2e15f0fe16b41143
 const router = express.Router();
 
 
