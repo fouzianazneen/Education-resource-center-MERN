@@ -19,7 +19,7 @@ const EducatorResources = () => {
     const fetchResources = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/educator/resources",
+          "https://education-resource-center-mern.onrender.com/educator/resources",
           { withCredentials: true }
         );
         setResources(response.data);
@@ -94,7 +94,7 @@ const EducatorResources = () => {
   
     try {
       const response = await axios.post(
-        "http://localhost:3000/educator/upload",
+        "https://education-resource-center-mern.onrender.com/educator/upload",
         formData,
         {
           headers: {
@@ -118,7 +118,7 @@ const EducatorResources = () => {
   
 
   const handleDownload = async (fileUrl) => {
-    const fullUrl = `http://localhost:3000${fileUrl}`;
+    const fullUrl = `https://education-resource-center-mern.onrender.com${fileUrl}`;
     try {
       window.open(fullUrl, "_blank");
     } catch (error) {
@@ -128,7 +128,7 @@ const EducatorResources = () => {
 
   const handleView = (fileUrl) => {
     window.open(
-      `http://localhost:3000${fileUrl}`,
+      `https://education-resource-center-mern.onrender.com${fileUrl}`,
       "_blank",
       "noopener,noreferrer"
     );
@@ -136,7 +136,7 @@ const EducatorResources = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/educator/resources/${id}`, {
+      await axios.delete(`https://education-resource-center-mern.onrender.com/educator/resources/${id}`, {
         withCredentials: true,
       });
       setResources(resources.filter((resource) => resource._id !== id));
