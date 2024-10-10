@@ -3,7 +3,7 @@
 
 const express = require('express');
 const bcrypt = require('bcrypt');
-const Student = require('../models/student');
+// const Student = require('../models/student');
 const Resource = require('../models/Resource');
 const router = express.Router();
 
