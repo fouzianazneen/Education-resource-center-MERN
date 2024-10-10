@@ -76,6 +76,7 @@
 
 
 
+// Importing required packages
 const express = require('express');
 const session = require('express-session');
 const mongoose = require('mongoose');
@@ -84,6 +85,7 @@ const educatorRoutes = require('./routes/educator');
 const studentRoutes = require('./routes/student');
 const path = require('path');
 const cors = require('cors');
+require('dotenv').config(); // Load environment variables from .env file
 
 const app = express();
 
@@ -116,19 +118,23 @@ app.use(session({
   }
 }));
 
+// Middleware for logging requests
 app.use((req, res, next) => {
   console.log(`Received ${req.method} request to ${req.url}`);
   next();
 });
 
+// Setting up routes
 app.use('/', authRoutes);
 app.use('/educator', educatorRoutes);
 app.use('/student', studentRoutes);
 
 app.use('/uploads', express.static('uploads'));
 
+// Connect to MongoDB
 mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB connected'))
-    .catch(err => console.error(err));
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
+// Start the server
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -3,7 +3,7 @@ const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 
-const Educator = require("../models/educator");
+// const Educator = require("../models/educator");
 const Resource = require("../models/Resource");
 const bcrypt = require("bcrypt");
 const router = express.Router();
