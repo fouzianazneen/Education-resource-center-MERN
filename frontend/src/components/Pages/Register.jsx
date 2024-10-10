@@ -35,7 +35,7 @@ const Register = () =>  {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const baseUrl = 'http://localhost:3000';
+      const baseUrl = 'https://education-resource-center-mern.onrender.com';
       const endpoint = credentials.role === 'educator' ? '/register/educator' : '/register/student';
       await axios.post(`${baseUrl}${endpoint}`, credentials);
       alert('Registration successful');
