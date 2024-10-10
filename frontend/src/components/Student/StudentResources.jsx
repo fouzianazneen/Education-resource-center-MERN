@@ -27,7 +27,7 @@ const StudentResources = () => {
   );
 
   const handleDownload = async (fileUrl) => {
-    const fullUrl = `http://localhost:3000${fileUrl}`;
+    const fullUrl = `https://education-resource-center-mern.onrender.com${fileUrl}`;
     try {
       window.open(fullUrl, "_blank");
 
